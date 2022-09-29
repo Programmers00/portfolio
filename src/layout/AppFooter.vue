@@ -9,4 +9,10 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+footer {
+  width: 100%;
+  height: 250px;
+  background-color: $white;
+}
+</style>
