@@ -20,7 +20,7 @@
 import BaseBox from "@/components/BaseBox.vue";
 import ImgCard from "@/components/ImgCard.vue";
 export default {
-  name: "WhoIam",
+  name: "Skills",
   components: {
     BaseBox,
     ImgCard,
@@ -43,6 +43,10 @@ export default {
       {
         imgTitle: "JS",
         imgSrc: "js",
+      },
+      {
+        imgTitle: "FIGMA",
+        imgSrc: "figma",
       },
       {
         imgTitle: "GIT",
