@@ -30,6 +30,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 9999;
   .logoNavBox {
     max-width: 1300px;
     width: 1300px;
