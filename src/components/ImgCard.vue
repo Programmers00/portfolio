@@ -25,10 +25,10 @@ export default {
   height: auto;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 20px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   .imgTitle {
     font-weight: 700;
     font-size: 32px;

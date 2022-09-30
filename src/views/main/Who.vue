@@ -34,7 +34,7 @@
 import BaseBox from "@/components/BaseBox.vue";
 import InfoCard from "@/components/InfoCard.vue";
 export default {
-  name: "WhoIam",
+  name: "Who",
   components: {
     BaseBox,
     InfoCard,
