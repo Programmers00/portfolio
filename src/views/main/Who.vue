@@ -16,7 +16,7 @@
       </div>
       <div class="infoContent" v-show="showInfo">
         <InfoCard
-          v-for="{ infoTitle, infoContent } in info"
+          v-for="{ infoTitle, infoContent } in infoData"
           v-bind:key="infoTitle"
         >
           <template v-slot:infoTitle> {{ infoTitle }}</template>
@@ -42,7 +42,7 @@ export default {
   data: () => ({
     bgColorData: "black",
     showInfo: false,
-    info: [
+    infoData: [
       { infoTitle: "NAME", infoContent: "EUNSHIN NOH" },
       { infoTitle: "DOB", infoContent: "APR 10, 1990" },
       { infoTitle: "MOBILE", infoContent: "825 994 4199" },

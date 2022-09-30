@@ -1,6 +1,5 @@
 <template>
   <div class="mainInfoCard">
-    <!-- <div class="infoTitleContent"> -->
     <!-- infoTitle -->
     <div class="infoTitle">
       <slot name="infoTitle"><p>Default title</p> </slot>
@@ -9,7 +8,6 @@
     <div class="infoContent">
       <slot name="infoContent">Default Content</slot>
     </div>
-    <!-- </div> -->
   </div>
 </template>
 
