@@ -26,10 +26,18 @@ export default {
   data: () => ({
     // default background color: #212322($black)
     bgColor: "#212321",
+    titleColor: "white",
   }),
   mounted() {
     // for css background color binding! black: #212322($black), white: #f7f8f8($white)
     this.bgColor = this.bgColorData === "black" ? "#212321" : "#f7f8f8";
+    if (this.bgColorData === "black") {
+      this.bgColor = "#212321";
+      this.titleColor = "white";
+    } else {
+      this.bgColor = "#f7f8f8";
+      this.titleColor = "black";
+    }
   },
 };
 </script>
@@ -55,7 +63,7 @@ export default {
       font-weight: 700;
       font-size: 34px;
       line-height: 15px;
-      color: white;
+      color: v-bind(titleColor);
     }
     .content {
       width: 100%;
