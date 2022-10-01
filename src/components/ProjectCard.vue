@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: "InfoCard",
+  name: "ProjectCard",
   components: {},
 };
 </script>
