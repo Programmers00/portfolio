@@ -1,18 +1,78 @@
 <template>
-  <footer>Footer</footer>
+  <footer class="mainFooterBox">
+    <ul class="footerIconsBox">
+      <div v-for="{ url, imgSrc } in iconsData" v-bind:key="url">
+        <a :href="url" target="_blank">
+          <img
+            :src="`/assets/images/${imgSrc}.png`"
+            :alt="`${imgSrc}`"
+            height="65"
+        /></a>
+      </div>
+    </ul>
+    <a class="footerCopyright" href="#"
+      >Copyright © NOhBUG all rights reserved.</a
+    >
+  </footer>
 </template>
 
 <script>
 export default {
   name: "AppFooter",
   components: {},
+  data: () => ({
+    iconsData: [
+      {
+        url: "https://www.linkedin.com/in/eunshin-noh-b58a06223/",
+        imgSrc: "linkedin",
+      },
+      {
+        url: "https://github.com/Programmers00/",
+        imgSrc: "github",
+      },
+      {
+        url: "https://programmers.tistory.com/",
+        imgSrc: "tistory",
+      },
+      {
+        url: "https://www.instagram.com/eunshinnoh/",
+        imgSrc: "instagram",
+      },
+      {
+        url: "https://www.facebook.com/eunshin.noh",
+        imgSrc: "facebook",
+      },
+      {
+        url: "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=nes0410@gmail.com",
+        imgSrc: "gmail",
+      },
+    ],
+  }),
 };
 </script>
 
 <style lang="scss">
-footer {
+.mainFooterBox {
   width: 100%;
   height: 250px;
   background-color: $white;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  .footerIconsBox {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .footerCopyright {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 </style>
