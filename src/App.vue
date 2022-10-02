@@ -502,6 +502,7 @@ body {
   color: #3e3e3e;
   line-height: 1.4em;
   -webkit-font-smoothing: antialiased;
+  background-color: $black;
 }
 
 ul,
