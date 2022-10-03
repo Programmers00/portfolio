@@ -1,7 +1,7 @@
 <template>
   <BaseBox :bgColorData="bgColorData">
     <!-- title -->
-    <template v-slot:title> Projects </template>
+    <template v-slot:title><a :name="`${title}`" />{{ title }}</template>
     <!-- content -->
     <template v-slot:content>
       <div class="projectsContent">
@@ -53,6 +53,7 @@ export default {
     ProjectCard,
   },
   data: () => ({
+    title: "Projects",
     bgColorData: "white",
     projectData: [
       {

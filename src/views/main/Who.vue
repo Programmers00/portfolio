@@ -1,7 +1,9 @@
 <template>
   <BaseBox :bgColorData="bgColorData">
     <!-- title -->
-    <template v-slot:title> Who I am </template>
+    <template v-slot:title
+      ><a :name="`${title.replace(/ /g, '')}`" />{{ title }}</template
+    >
     <!-- content -->
     <template v-slot:content>
       <div class="introContent">
@@ -40,6 +42,7 @@ export default {
     InfoCard,
   },
   data: () => ({
+    title: "Who I am",
     bgColorData: "black",
     showInfo: false,
     infoData: [

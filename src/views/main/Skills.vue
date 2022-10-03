@@ -1,7 +1,7 @@
 <template>
   <BaseBox :bgColorData="bgColorData">
     <!-- title -->
-    <template v-slot:title> Skills </template>
+    <template v-slot:title><a :name="`${title}`" />{{ title }}</template>
     <!-- content -->
     <template v-slot:content>
       <div class="skillsContent">
@@ -26,6 +26,7 @@ export default {
     ImgCard,
   },
   data: () => ({
+    title: "Skills",
     bgColorData: "white",
     imgData: [
       {
