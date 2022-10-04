@@ -49,7 +49,7 @@ export default {
     mainNavbarTransform: "none", // default "none", scroll evnet => hidden("translate3d(0, -100%, 0)")
     //menuIcon or XIcon
     menuBtn: "menuIcon", // or xIcon
-    menuViewFade: "fadeOut",
+    menuViewFade: "menuClose",
     // menuViewVisibility: "hidden",
     // menuIcon Style
     menuIconJustifyContent: "space-between", // or "space-evenly"
@@ -91,10 +91,8 @@ export default {
       this.showNavbar = window.pageYOffset < this.lastScrollPosition;
       this.lastScrollPosition = window.pageYOffset;
       if (this.showNavbar) {
-        console.log("##1");
         this.mainNavbarTransform = "none";
       } else {
-        console.log("##2");
         this.mainNavbarTransform = "translate3d(0, -100%, 0)";
       }
     },
@@ -103,7 +101,7 @@ export default {
       this.menuBtn = this.menuBtn === "menuIcon" ? "xIcon" : "menuIcon";
       if (this.menuBtn === "menuIcon") {
         // menuView -> Close
-        this.menuViewFade = "fadeOut"; // "opacity:0, visibility: hidden"
+        this.menuViewFade = "menuClose"; // "opacity:0, visibility: hidden"
         // menuIcon -> xIcon
         this.menuIconJustifyContent = "space-between";
         this.secondBtnVisibility = "visible";
@@ -111,7 +109,7 @@ export default {
         this.lastBtnTransform = "none";
       } else {
         // menuView -> Open
-        this.menuViewFade = "fadeIn"; // "opacity:1, visibility: visible"
+        this.menuViewFade = "menuOpen"; // "opacity:1, visibility: visible"
         // xIcon -> menuIcon
         this.menuIconJustifyContent = "space-evenly";
         this.secondBtnVisibility = "hidden";
@@ -125,7 +123,7 @@ export default {
 </script>
 <style lang="scss">
 // menu view: Open
-@keyframes fadeIn {
+@keyframes menuOpen {
   0% {
     opacity: 0;
     visibility: hidden;
@@ -135,7 +133,7 @@ export default {
   }
 }
 // menu view: Close
-@keyframes fadeOut {
+@keyframes menuClose {
   0% {
     opacity: 1;
   }
