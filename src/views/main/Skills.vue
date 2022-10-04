@@ -29,9 +29,10 @@ export default {
     ImgCard,
   },
   data: () => ({
+    /** style data */
+    bgColorData: "white",
     /** data */
     title: "Skills",
-    bgColorData: "white",
     imgData: [
       "vue",
       "html",
