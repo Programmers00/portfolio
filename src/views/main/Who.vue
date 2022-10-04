@@ -10,11 +10,11 @@
       <div class="introContent">
         <p class="intro">
           Front-End Web Developer
-          <span style="font-size: 2.9rem"> CHALLENGING </span>
-          <span style="font-size: 3.1rem"> POSITIVE </span>
-          <span style="font-size: 3.4rem"> FAST-PACED </span>
-          <span style="font-size: 3.1rem"> HONEST </span>
-          <span style="font-size: 3.7rem"> TENACIOUS </span>
+          <span class="challenging"> CHALLENGING </span>
+          <span class="positive"> POSITIVE </span>
+          <span class="fastPaced"> FAST-PACED </span>
+          <span class="honest"> HONEST </span>
+          <span class="tenacious"> TENACIOUS </span>
         </p>
       </div>
       <!-- information: toggle -->
@@ -59,7 +59,7 @@ export default {
       { infoTitle: "EMAIL", infoContent: "nes0410@gmail.com" },
       {
         infoTitle: "ADDRESS",
-        infoContent: "310 Cranford Court SE, AB T3M 0W3, Canada",
+        infoContent: "Calgay city in Alberta, Canada",
       },
       {
         infoTitle: "EDUCATION",
@@ -135,26 +135,64 @@ export default {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-block: 25px;
+  padding-block: 1.5rem;
   color: white;
   height: auto;
   .intro {
     max-width: 900px;
     font-weight: 700;
-    font-size: 3.9em;
-    line-height: 3.9rem;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    @include lg {
+      font-size: 3.9rem;
+      line-height: 3.9rem;
+    }
+    .challenging {
+      font-size: 1.4rem;
+      @include lg {
+        font-size: 2.9rem;
+      }
+    }
+    .positive {
+      font-size: 1.7rem;
+      @include lg {
+        font-size: 3.1rem;
+      }
+    }
+    .fastPaced {
+      font-size: 1.9rem;
+      @include lg {
+        font-size: 3.4rem;
+      }
+    }
+    .honest {
+      font-size: 1.7rem;
+      @include lg {
+        font-size: 3.1rem;
+      }
+    }
+    .tenacious {
+      font-size: 1.4rem;
+      @include lg {
+        font-size: 3.7rem;
+      }
+    }
   }
 }
 .infoContent {
   width: 100%;
-  padding-block: 10px;
+  padding-block: 1rem;
   justify-content: space-between;
   align-items: flex-start;
   animation: v-bind(infoContentAnimation) ease-in 350ms forwards;
 }
 // button animation
 button {
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
+  @include lg {
+    font-size: 2rem !important;
+  }
+
   border: none;
   color: white;
   text-align: center;

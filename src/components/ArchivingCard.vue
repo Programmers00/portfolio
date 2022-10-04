@@ -42,7 +42,7 @@ export default {
   flex-direction: column;
   flex-wrap: wrap;
   width: auto;
-  @include xl {
+  @include lg {
     width: 45%;
     min-width: 585px;
   }
@@ -52,23 +52,35 @@ export default {
   }
   .url {
     font-weight: 700;
-    font-size: 1.2rem;
-    line-height: 1.2rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    @include lg {
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+    }
   }
   .detail {
     font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 2.4rem;
-    padding-block: 3rem;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    padding-block: 2rem;
+    @include lg {
+      font-size: 2.4rem;
+      line-height: 2.4rem;
+      padding-block: 3rem;
+    }
   }
   // "explore insight" button animation
   .explore {
     font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    @include lg {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
     border: none;
     color: black;
-    // text-align: center;
     text-decoration: none;
     display: inline-block;
   }

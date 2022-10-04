@@ -108,16 +108,16 @@ export default {
   justify-content: space-evenly;
   justify-self: center;
   flex-wrap: wrap;
-  padding-block: 25px;
+  padding-block: 1.5rem;
   color: white;
   height: auto;
-  gap: 30px;
+  gap: 2rem;
 }
 .key {
   min-width: 100%;
   font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   @include lg {
     min-width: 16rem;
     font-size: 2.3rem;
@@ -127,8 +127,8 @@ export default {
 .value {
   word-break: break-all;
   font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
   @include lg {
     max-width: 40rem;
     font-size: 2rem;

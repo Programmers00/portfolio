@@ -62,9 +62,9 @@ export default {
   justify-content: space-evenly;
   justify-self: center;
   flex-wrap: wrap;
-  padding-block: 25px;
+  padding-block: 1.5rem;
   color: white;
   height: auto;
-  gap: 30px;
+  gap: 2rem;
 }
 </style>

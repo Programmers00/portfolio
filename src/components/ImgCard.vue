@@ -25,13 +25,16 @@ export default {
   height: auto;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 1.5rem;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1rem;
   .imgTitle {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    @include lg {
+      font-size: 2rem;
+    }
   }
   .imgSrc {
     mix-blend-mode: luminosity;

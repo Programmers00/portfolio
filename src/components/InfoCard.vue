@@ -26,17 +26,25 @@ export default {
   height: auto;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-block: 10px;
+  padding-block: 0.6rem;
   .infoTitle {
     font-weight: 700;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    @include lg {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
   }
   .infoContent {
     display: inline;
     font-weight: 300;
-    font-size: 1.8rem;
-    line-height: 1.8rem;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    @include lg {
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+    }
   }
 }
 </style>

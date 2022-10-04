@@ -147,7 +147,10 @@ export default {
 .mainNavbarBox {
   position: fixed;
   width: 100%;
-  height: 100px;
+  height: 50px;
+  @include lg {
+    height: 100px;
+  }
   background-color: $black;
   display: flex;
   align-items: center;
@@ -156,13 +159,14 @@ export default {
   transform: v-bind(mainNavbarTransform);
   transition: 250ms transform ease-out;
   .menuView {
-    top: 100px;
+    top: 50px;
     position: absolute;
     width: 100%;
     height: 100vh;
     background-color: $black;
     animation: v-bind(menuViewToggle) ease-out 250ms forwards;
-    @include xl {
+    @include lg {
+      top: 100px;
       visibility: hidden;
     }
     .navMenuCol {
@@ -170,19 +174,18 @@ export default {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 50px;
-      padding-block: 50px;
+      gap: 2.5rem;
+      padding-block: 2.5rem;
       ul {
         font-weight: 700;
-        font-size: 22px;
-        line-height: 15px;
+        font-size: 1.7rem;
+        line-height: 1.7rem;
         list-style-type: none;
         li {
           display: inline;
         }
         a {
           color: white;
-          padding: 15px;
         }
       }
     }
@@ -198,9 +201,12 @@ export default {
       text-decoration: none;
       color: white;
       font-weight: 700;
-      // font-size: 64px;
-      font-size: 4rem;
-      line-height: 4rem;
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      @include lg {
+        font-size: 4rem;
+        line-height: 4rem;
+      }
     }
     .nav {
       .menuIcon {
@@ -235,25 +241,25 @@ export default {
           transition: transform 250ms;
         }
         cursor: pointer;
-        @include xl {
+        @include lg {
           display: none;
         }
       }
       .navMenuRow {
         display: none;
-        @include xl {
+        @include lg {
           display: flex;
           ul {
             font-weight: 700;
-            font-size: 22px;
-            line-height: 15px;
+            font-size: 1.7rem;
+            line-height: 1.7rem;
             list-style-type: none;
             li {
               display: inline;
             }
             a {
               color: white;
-              padding: 15px;
+              padding: 1.2rem;
             }
           }
         }

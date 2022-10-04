@@ -57,7 +57,7 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-block: 25px;
+  padding-block: 1.5rem;
   color: white;
   height: auto;
 }

@@ -30,6 +30,9 @@ export default {
 main {
   width: 100%;
   height: auto;
-  padding-top: 100px;
+  padding-top: 50px;
+  @include lg {
+    padding-top: 100px;
+  }
 }
 </style>

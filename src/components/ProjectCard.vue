@@ -69,7 +69,7 @@ export default {
       font-weight: 700;
       font-size: 2rem;
       line-height: 2rem;
-      @include xl {
+      @include lg {
         font-size: 3.5rem;
         line-height: 3.5rem;
       }
@@ -79,7 +79,7 @@ export default {
       font-weight: 400;
       font-size: 1.2rem;
       line-height: 1.2rem;
-      @include xl {
+      @include lg {
         font-size: 2rem;
         line-height: 2rem;
       }
@@ -87,12 +87,15 @@ export default {
   }
   .projectContent {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
     justify-self: center;
     padding-block: 4rem;
-    gap: 30px;
+    gap: 2rem;
+    @include lg {
+      flex-direction: row;
+    }
     .projectImg {
       mix-blend-mode: luminosity;
       display: flex;
@@ -100,10 +103,8 @@ export default {
       min-width: 80%;
       @include lg {
         min-width: 370px;
+        max-height: 500px;
       }
-      // @include xl {
-      //   min-width: 370px;
-      // }
     }
     .projectInfoBox {
       display: flex;
@@ -111,12 +112,9 @@ export default {
       @include lg {
         flex: 2;
       }
-      // @include xl {
-      //   flex: 2;
-      // }
       flex-wrap: wrap;
       flex-direction: column;
-      gap: 50px;
+      gap: 2.5rem;
       .projectSubtitle {
         font-weight: 700;
         font-size: 1.5rem;
@@ -136,7 +134,8 @@ export default {
         }
       }
       .projectDetail {
-        gap: 20px;
+        // gap: 20px;
+        gap: 1rem;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
