@@ -29,13 +29,14 @@ export default {
   padding-block: 10px;
   .infoTitle {
     font-weight: 700;
-    font-size: 34px;
+    font-size: 2rem;
+    line-height: 2rem;
   }
   .infoContent {
     display: inline;
     font-weight: 300;
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
   }
 }
 </style>
