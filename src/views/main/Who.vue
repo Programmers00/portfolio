@@ -6,6 +6,7 @@
     >
     <!-- content -->
     <template v-slot:content>
+      <!-- introduction -->
       <div class="introContent">
         <p class="intro">
           Front-End Web Developer
@@ -16,6 +17,7 @@
           <span style="font-size: 3.7rem"> TENACIOUS </span>
         </p>
       </div>
+      <!-- information: toggle -->
       <div class="infoContent">
         <InfoCard
           v-for="{ infoTitle, infoContent } in infoData"
@@ -25,6 +27,7 @@
           <template v-slot:infoContent>{{ infoContent }}</template>
         </InfoCard>
       </div>
+      <!-- information toggle button -->
       <button @click="showInfoToggle">
         {{ infoBtn === "showMore" ? "SHOW MORE" : "SHOW LESS" }}
       </button>
@@ -66,6 +69,7 @@ export default {
     ],
   }),
   methods: {
+    /** information toggle function */
     showInfoToggle() {
       this.infoBtn = this.infoBtn === "showMore" ? "showLess" : "showMore";
       if (this.infoBtn === "showMore") {
@@ -79,11 +83,11 @@ export default {
 </script>
 
 <style lang="scss">
+// information Open
 @keyframes infoOpen {
   0% {
     opacity: 0;
     visibility: hidden;
-    // display: none;
     height: 0;
   }
   25% {
@@ -100,14 +104,13 @@ export default {
   }
   100% {
     opacity: 1;
-    // display: block;
     height: auto;
   }
 }
+// information Close
 @keyframes infoClose {
   0% {
     opacity: 1;
-    // display: block;
     height: auto;
   }
   25% {
@@ -125,7 +128,6 @@ export default {
   100% {
     opacity: 0;
     visibility: hidden;
-    // display: none;
     height: 0;
   }
 }
@@ -139,30 +141,37 @@ export default {
   .intro {
     max-width: 900px;
     font-weight: 700;
-    // font-size: 60px;
     font-size: 3.9em;
-    // line-height: 50px;
     line-height: 3.9rem;
   }
 }
 .infoContent {
   width: 100%;
-  // display: inline-flex;
-  // flex-direction: row;
-  // flex-wrap: wrap;
   padding-block: 10px;
-  // height: auto;
   justify-content: space-between;
   align-items: flex-start;
   animation: v-bind(infoContentAnimation) ease-in 350ms forwards;
 }
+// button animation
 button {
-  // font-size: 30px !important;
   font-size: 2rem !important;
   border: none;
   color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+}
+button:after {
+  border: 1px solid rgba(white, 0);
+  content: " ";
+  display: block;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+button:hover:after {
+  border-color: white;
+  transition: width 350ms ease-in-out;
+  width: 100%;
 }
 </style>
