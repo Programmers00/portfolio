@@ -38,25 +38,32 @@ export default {
 
 <style lang="scss">
 .mainCareerCard {
-  padding-block: 30px;
-  padding-inline: 80px;
+  padding-block: 1.5rem;
+  padding-inline: 3rem;
   gap: 10px;
   display: flex;
   color: white;
   height: auto;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
+  @include lg {
+    flex-direction: row;
+  }
   .companyLogoBox {
-    padding-right: 20px;
+    padding-right: 0;
     width: 100%;
     display: flex;
     flex: 1;
     flex-direction: column;
     flex-wrap: wrap;
     justify-items: center;
-    align-content: center;
-    border-right: 1px solid white;
+    align-content: flex-start;
+    border: none;
+    @include lg {
+      border-right: 1px solid white;
+      padding-right: 1.2rem;
+    }
     .companyLogo {
       min-width: 250px;
       mix-blend-mode: luminosity;
@@ -67,35 +74,53 @@ export default {
   }
   .careerBox {
     display: flex;
-    flex: 3;
+    flex: 1;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
     justify-self: center;
-    padding-left: 20px;
+    padding-left: 0;
+    @include lg {
+      padding-left: 1.2rem;
+      flex: 3;
+    }
     gap: 30px;
     .companyName {
       font-weight: 700;
-      font-size: 45px;
-      line-height: 45px;
+      font-size: 2.3rem;
+      line-height: 2.3rem;
+      @include lg {
+        font-size: 3.4rem;
+        line-height: 3.4rem;
+      }
     }
     .careerPeriod {
       font-weight: 400;
-      font-size: 24px;
-      line-height: 24px;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+      @include lg {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+      }
     }
-
     .careerDetail {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       font-weight: 200;
-      font-size: 24px;
-      line-height: 34px;
-      padding-bottom: 20px;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      @include lg {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+      padding-bottom: 1.2rem;
       border-bottom: 1px solid white;
     }
     .careerProject {
       display: flex;
       flex-direction: column;
-      gap: 50px;
+      gap: 3rem;
     }
   }
 }

@@ -5,6 +5,7 @@
     <!-- content -->
     <template v-slot:content>
       <div class="careerContent">
+        <!-- career card: repeat -->
         <CareerCard
           v-for="{
             companyLogoSrc,
@@ -15,21 +16,26 @@
           } in careerData"
           v-bind:key="companyName"
         >
+          <!-- logo image -->
           <template v-slot:companyLogo
             ><img
               :src="`/assets/images/${companyLogoSrc}.png`"
               alt="Logo"
               width="100%"
           /></template>
+          <!-- company name -->
           <template v-slot:companyName>{{ companyName }} </template>
+          <!-- company career period -->
           <template v-slot:careerPeriod>
             {{ careerPeriod }}
           </template>
+          <!-- career detail: repeat -->
           <template v-slot:careerDetail>
             <div v-for="careerData in careerDetail" v-bind:key="careerData">
               {{ careerData }}
             </div>
           </template>
+          <!-- career proejct: repeat -->
           <template v-slot:careerProject>
             <div
               class="careerProjectBox"
@@ -71,8 +77,10 @@ export default {
     CareerCard,
   },
   data: () => ({
-    title: "Career",
+    /** style data */
     bgColorData: "black",
+    /** data */
+    title: "Career",
     careerData: [
       {
         companyLogoSrc: "thubCompany",
@@ -153,25 +161,42 @@ export default {
   gap: 30px;
   .projectTitle {
     font-weight: 500;
-    font-size: 30px;
-    line-height: 34px;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    @include lg {
+      font-size: 2.2rem;
+      line-height: 2.2rem;
+    }
   }
   .projectSubtitle {
     font-weight: 400;
-    font-size: 15px;
-    line-height: 19px;
+    padding-block: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    @include lg {
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+    }
   }
   .projectPeriod {
     font-weight: 300;
-    font-size: 20px;
-    line-height: 24px;
-    padding-block: 15px;
+    padding-block: 1rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    @include lg {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
   }
   .projectCareer {
     padding-block: 5px;
     font-weight: 200;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    @include lg {
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+    }
   }
 }
 </style>
