@@ -42,6 +42,7 @@ export default {
   name: "AppNavbar",
   components: {},
   data: () => ({
+    /** style data */
     // scroll event for navbar hidden or not
     showNavbar: true,
     lastScrollPosition: 0,
@@ -56,6 +57,7 @@ export default {
     secondBtnVisibility: "visible", // or "hidden"
     firstBtnTransform: "none", // or "translateY(9px) rotate(-45deg)"
     lastBtnTransform: "none", // or "translateY(-9px) translateX(0.5px) rotate(45deg)"
+    /** data */
     // navigation Data
     navData: ["Who I am", "Skills", "Archiving", "Projects", "Career"],
   }),
