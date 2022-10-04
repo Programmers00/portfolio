@@ -5,10 +5,13 @@
     <!-- content -->
     <template v-slot:content>
       <div class="skillsContent">
+        <!-- image card -->
         <ImgCard v-for="{ imgTitle, imgSrc } in imgData" v-bind:key="imgTitle">
+          <!-- title -->
           <template v-slot:imgTitle> {{ imgTitle }} </template>
+          <!-- image -->
           <template v-slot:imgSrc
-            ><img :src="`/assets/images/${imgSrc}.png`" height="120"
+            ><img :src="`/assets/images/${imgSrc}.png`" height="60rem"
           /></template>
         </ImgCard>
       </div>
@@ -26,6 +29,7 @@ export default {
     ImgCard,
   },
   data: () => ({
+    /** data */
     title: "Skills",
     bgColorData: "white",
     imgData: [
@@ -70,7 +74,7 @@ export default {
         imgSrc: "flutter",
       },
       {
-        imgTitle: "SPRING TOOL SUITE",
+        imgTitle: "STS",
         imgSrc: "sts",
       },
       {

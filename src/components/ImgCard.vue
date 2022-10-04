@@ -31,7 +31,7 @@ export default {
   gap: 20px;
   .imgTitle {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 2rem;
   }
   .imgSrc {
     mix-blend-mode: luminosity;
