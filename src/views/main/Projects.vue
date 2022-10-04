@@ -5,10 +5,11 @@
     <!-- content -->
     <template v-slot:content>
       <div class="projectsContent">
+        <!-- projects repeat -->
         <ProjectCard
           v-for="{
             projectTitle,
-            projectDuration,
+            projectPeriod,
             projectImgSrc,
             projectSubtitle,
             projectSummary,
@@ -16,8 +17,11 @@
           } in projectData"
           v-bind:key="projectTitle"
         >
+          <!-- project title -->
           <template v-slot:projectTitle>{{ projectTitle }} </template>
-          <template v-slot:projectDuration>{{ projectDuration }} </template>
+          <!-- project period -->
+          <template v-slot:projectPeriod>{{ projectPeriod }} </template>
+          <!-- project image -->
           <template v-slot:projectImg>
             <img
               width="100%"
@@ -25,8 +29,11 @@
               alt="No Image"
             />
           </template>
+          <!-- project subtitle -->
           <template v-slot:projectSubtitle>{{ projectSubtitle }} </template>
+          <!-- project summary -->
           <template v-slot:projectSummary>{{ projectSummary }} </template>
+          <!-- project detail repeat-->
           <template v-slot:projectDetail>
             <div
               style="display: flex; flex-direction: row; flex-wrap: wrap"
@@ -53,12 +60,14 @@ export default {
     ProjectCard,
   },
   data: () => ({
-    title: "Projects",
+    /** style data */
     bgColorData: "white",
+    /** data */
+    title: "Projects",
     projectData: [
       {
         projectTitle: "NOhBUG Portfolio Website",
-        projectDuration: "(Sep 2022 personal project)",
+        projectPeriod: "(Sep 2022 personal project)",
         projectImgSrc: "portfolio",
         projectSubtitle: "This is my portfolio website which you are seeing",
         projectSummary:
@@ -73,7 +82,7 @@ export default {
       },
       {
         projectTitle: "Baby Sleep",
-        projectDuration: "(July 2022 - ing personal project)",
+        projectPeriod: "(July 2022 - ing personal project)",
         projectImgSrc: "babySleep",
         projectSubtitle:
           "This application is white noise application for my baby",
@@ -104,18 +113,26 @@ export default {
   height: auto;
   gap: 30px;
 }
-
 .key {
-  min-width: 230px;
+  min-width: 100%;
   font-weight: 700;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  @include lg {
+    min-width: 16rem;
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+  }
 }
 .value {
-  max-width: 510px;
   word-break: break-all;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 28px;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  @include lg {
+    max-width: 40rem;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
 }
 </style>
