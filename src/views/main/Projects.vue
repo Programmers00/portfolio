@@ -75,7 +75,7 @@ export default {
         projectDetailData: {
           feature: "Information summary, Skills, Archivings, Projects, Career",
           git: "https://github.com/Programmers00/portfolio",
-          url: "Getting Ready",
+          url: "https://nohbug.netlify.app/",
           frontEnd: "Vue, javascript, sass, html, sass",
           deployment: "netlify",
         },
