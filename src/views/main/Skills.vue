@@ -6,12 +6,12 @@
     <template v-slot:content>
       <div class="skillsContent">
         <!-- image card -->
-        <ImgCard v-for="{ imgTitle, imgSrc } in imgData" v-bind:key="imgTitle">
+        <ImgCard v-for="imgItem in imgData" v-bind:key="imgItem">
           <!-- title -->
-          <template v-slot:imgTitle> {{ imgTitle }} </template>
+          <template v-slot:imgTitle> {{ imgItem.toUpperCase() }} </template>
           <!-- image -->
           <template v-slot:imgSrc
-            ><img :src="`/assets/images/${imgSrc}.png`" height="60rem"
+            ><img :src="`/assets/images/${imgItem}.png`" height="60rem"
           /></template>
         </ImgCard>
       </div>
@@ -33,58 +33,19 @@ export default {
     title: "Skills",
     bgColorData: "white",
     imgData: [
-      {
-        imgTitle: "VUE",
-        imgSrc: "vue",
-      },
-      {
-        imgTitle: "HTML",
-        imgSrc: "html",
-      },
-      {
-        imgTitle: "CSS",
-        imgSrc: "css",
-      },
-      {
-        imgTitle: "JS",
-        imgSrc: "js",
-      },
-      {
-        imgTitle: "FIGMA",
-        imgSrc: "figma",
-      },
-      {
-        imgTitle: "GIT",
-        imgSrc: "git",
-      },
-      {
-        imgTitle: "GITHUB",
-        imgSrc: "github",
-      },
-      {
-        imgTitle: "GITLAB",
-        imgSrc: "gitlab",
-      },
-      {
-        imgTitle: "SOURCETREE",
-        imgSrc: "sourceTree",
-      },
-      {
-        imgTitle: "FLUTTER",
-        imgSrc: "flutter",
-      },
-      {
-        imgTitle: "STS",
-        imgSrc: "sts",
-      },
-      {
-        imgTitle: "POSTGRE",
-        imgSrc: "postgre",
-      },
-      {
-        imgTitle: "DBEAVER",
-        imgSrc: "dbeaver",
-      },
+      "vue",
+      "html",
+      "css",
+      "js",
+      "figma",
+      "git",
+      "github",
+      "gitlab",
+      "sourceTree",
+      "flutter",
+      "sts",
+      "postgre",
+      "dbeaver",
     ],
   }),
 };
