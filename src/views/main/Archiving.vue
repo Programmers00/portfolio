@@ -5,14 +5,19 @@
     <!-- content -->
     <template v-slot:content>
       <div class="archivingContent">
+        <!-- archiving repeat -->
         <ArchivingCard
           v-for="{ titleImgSrc, url, detail } in archivingData"
           v-bind:key="titleImgSrc"
           :url="url"
-          ><template v-slot:titleImg
-            ><img :src="`/assets/images/${titleImgSrc}.png`" height="80"
+        >
+          <!-- image -->
+          <template v-slot:titleImg
+            ><img :src="`/assets/images/${titleImgSrc}.png`" height="65rem"
           /></template>
+          <!-- url -->
           <template v-slot:url>{{ url }}</template>
+          <!-- detail -->
           <template v-slot:detail> {{ detail }} </template>
         </ArchivingCard>
       </div>
@@ -30,8 +35,10 @@ export default {
     ArchivingCard,
   },
   data: () => ({
-    title: "Archiving",
+    /** style data */
     bgColorData: "black",
+    title: "Archiving",
+    /** data */
     archivingData: [
       {
         titleImgSrc: "githubTitle",
