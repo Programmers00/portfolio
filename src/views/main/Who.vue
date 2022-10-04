@@ -48,10 +48,10 @@ export default {
     /** style data */
     infoBtn: "showMore", // "showLess"
     infoContentAnimation: "infoClose",
+    bgColorData: "black",
     /** data */
     title: "Who I am",
-    bgColorData: "black",
-    showInfo: false,
+
     infoData: [
       { infoTitle: "NAME", infoContent: "EUNSHIN NOH" },
       { infoTitle: "DOB", infoContent: "APR 10, 1990" },
