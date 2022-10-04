@@ -49,7 +49,7 @@ export default {
     mainNavbarTransform: "none", // default "none", scroll evnet => hidden("translate3d(0, -100%, 0)")
     //menuIcon or XIcon
     menuBtn: "menuIcon", // or xIcon
-    menuViewFade: "menuClose",
+    menuViewToggle: "menuClose",
     // menuViewVisibility: "hidden",
     // menuIcon Style
     menuIconJustifyContent: "space-between", // or "space-evenly"
@@ -101,7 +101,7 @@ export default {
       this.menuBtn = this.menuBtn === "menuIcon" ? "xIcon" : "menuIcon";
       if (this.menuBtn === "menuIcon") {
         // menuView -> Close
-        this.menuViewFade = "menuClose"; // "opacity:0, visibility: hidden"
+        this.menuViewToggle = "menuClose"; // "opacity:0, visibility: hidden"
         // menuIcon -> xIcon
         this.menuIconJustifyContent = "space-between";
         this.secondBtnVisibility = "visible";
@@ -109,7 +109,7 @@ export default {
         this.lastBtnTransform = "none";
       } else {
         // menuView -> Open
-        this.menuViewFade = "menuOpen"; // "opacity:1, visibility: visible"
+        this.menuViewToggle = "menuOpen"; // "opacity:1, visibility: visible"
         // xIcon -> menuIcon
         this.menuIconJustifyContent = "space-evenly";
         this.secondBtnVisibility = "hidden";
@@ -159,7 +159,7 @@ export default {
     width: 100%;
     height: 100vh;
     background-color: $black;
-    animation: v-bind(menuViewFade) ease-out 250ms forwards;
+    animation: v-bind(menuViewToggle) ease-out 250ms forwards;
     @include xl {
       visibility: hidden;
     }
@@ -196,8 +196,9 @@ export default {
       text-decoration: none;
       color: white;
       font-weight: 700;
-      font-size: 64px;
-      line-height: 15px;
+      // font-size: 64px;
+      font-size: 4rem;
+      line-height: 4rem;
     }
     .nav {
       .menuIcon {
