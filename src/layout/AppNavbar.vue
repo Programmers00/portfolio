@@ -181,11 +181,26 @@ export default {
         font-size: 1.7rem;
         line-height: 1.7rem;
         list-style-type: none;
-        li {
-          display: inline;
-        }
+        color: white;
         a {
           color: white;
+          text-decoration: none;
+          border: none;
+          display: inline-block;
+        }
+        a:after {
+          border: 1px solid rgba(white, 0);
+          content: " ";
+          display: block;
+          position: relative;
+          transition: all 280ms ease-in-out;
+          width: 0;
+        }
+        a:hover:after {
+          margin: auto;
+          border-color: white;
+          transition: width 350ms ease-in-out;
+          width: 100%;
         }
       }
     }
@@ -218,6 +233,7 @@ export default {
         justify-content: v-bind(menuIconJustifyContent);
         outline: none;
         width: 40px;
+        // menuIcon or xIcon
         .bar:nth-child(1) {
           height: 4px;
           background-color: white;
@@ -256,10 +272,27 @@ export default {
             list-style-type: none;
             li {
               display: inline;
-            }
-            a {
-              color: white;
-              padding: 1.2rem;
+              a {
+                color: white;
+                padding: 1.2rem;
+                text-decoration: none;
+                border: none;
+                display: inline-block;
+              }
+              a:after {
+                border: 1px solid rgba(white, 0);
+                content: " ";
+                display: block;
+                position: relative;
+                transition: all 280ms ease-in-out;
+                width: 0;
+              }
+              a:hover:after {
+                margin: auto;
+                border-color: white;
+                transition: width 350ms ease-in-out;
+                width: 100%;
+              }
             }
           }
         }

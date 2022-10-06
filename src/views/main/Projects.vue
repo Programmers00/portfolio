@@ -76,8 +76,8 @@ export default {
           feature: "Information summary, Skills, Archivings, Projects, Career",
           git: "https://github.com/Programmers00/portfolio",
           url: "https://nohbug.netlify.app/",
-          frontEnd: "Vue, javascript, sass, html, sass",
-          deployment: "netlify",
+          frontEnd: "Vuejs, JavaScript, Sass, Html, Css",
+          deployment: "Netlify",
         },
       },
       {

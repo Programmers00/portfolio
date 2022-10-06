@@ -64,7 +64,7 @@ export default {
       {
         infoTitle: "EDUCATION",
         infoContent:
-          "Bachelor in Computer Engineering(kumoh national institute of technology, South Korea)",
+          "Bachelor’s in computer engineering(kumoh national institute of technology, South Korea)",
       },
     ],
   }),
