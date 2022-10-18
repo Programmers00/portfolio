@@ -56,7 +56,7 @@ export default {
   height: auto;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 100%;
+  width: 95%;
   .projectTitleBox {
     display: flex;
     flex-direction: column;
@@ -95,20 +95,13 @@ export default {
     gap: 2rem;
     @include lg {
       flex-direction: row;
+      max-width: 100%;
     }
     .projectImg {
-      mix-blend-mode: luminosity;
-      display: flex;
       flex: 1;
-      min-width: 80%;
-      @include lg {
-        min-width: 370px;
-        max-height: 500px;
-      }
     }
     .projectInfoBox {
       display: flex;
-      flex: 1;
       @include lg {
         flex: 2;
       }

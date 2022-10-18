@@ -23,11 +23,7 @@
           <template v-slot:projectPeriod>{{ projectPeriod }} </template>
           <!-- project image -->
           <template v-slot:projectImg>
-            <img
-              width="100%"
-              :src="`/assets/images/${projectImgSrc}.png`"
-              alt="No Image"
-            />
+            <SlideCard :projectImgSrc="projectImgSrc"> </SlideCard>
           </template>
           <!-- project subtitle -->
           <template v-slot:projectSubtitle>{{ projectSubtitle }} </template>
@@ -53,11 +49,13 @@
 <script>
 import BaseBox from "@/components/BaseBox.vue";
 import ProjectCard from "@/components/ProjectCard.vue";
+import SlideCard from "@/components/SlideCard.vue";
 export default {
   name: "Projects",
   components: {
     BaseBox,
     ProjectCard,
+    SlideCard,
   },
   data: () => ({
     /** style data */
@@ -68,7 +66,7 @@ export default {
       {
         projectTitle: "NOhBUG Portfolio Website",
         projectPeriod: "(Sep 2022 personal project)",
-        projectImgSrc: "portfolio",
+        projectImgSrc: ["portfolio", "babySleep", "portfolio", "babySleep"],
         projectSubtitle: "This is my portfolio website which you are seeing",
         projectSummary:
           "It shows my information, Skills, Archivings, Projects and Career.",
@@ -83,7 +81,7 @@ export default {
       {
         projectTitle: "Baby Sleep",
         projectPeriod: "(July 2022 - ing personal project)",
-        projectImgSrc: "babySleep",
+        projectImgSrc: ["babySleep"],
         projectSubtitle:
           "This application is white noise application for my baby",
         projectSummary:

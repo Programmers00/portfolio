@@ -28,7 +28,7 @@
         </InfoCard>
       </div>
       <!-- information toggle button -->
-      <button @click="showInfoToggle">
+      <button class="toggleBtn" @click="showInfoToggle">
         {{ infoBtn === "showMore" ? "SHOW MORE" : "SHOW LESS" }}
       </button>
     </template>
@@ -187,7 +187,7 @@ export default {
   animation: v-bind(infoContentAnimation) ease-in 350ms forwards;
 }
 // button animation
-button {
+.toggleBtn {
   font-size: 1.5rem !important;
   @include lg {
     font-size: 2rem !important;
@@ -199,7 +199,7 @@ button {
   text-decoration: none;
   display: inline-block;
 }
-button:after {
+.toggleBtn:after {
   border: 1px solid rgba(white, 0);
   content: " ";
   display: block;
@@ -207,7 +207,7 @@ button:after {
   transition: all 280ms ease-in-out;
   width: 0;
 }
-button:hover:after {
+.toggleBtn:hover:after {
   border-color: white;
   transition: width 350ms ease-in-out;
   width: 100%;
