@@ -7,7 +7,7 @@
         v-for="item in projectImgSrc"
         v-bind:key="item"
         width="100%"
-        :src="`/assets/images/${item}.png`"
+        :src="`/assets/images/projects/${item}.png`"
         alt="No Image"
       />
     </div>

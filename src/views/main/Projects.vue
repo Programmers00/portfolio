@@ -66,7 +66,13 @@ export default {
       {
         projectTitle: "NOhBUG Portfolio Website",
         projectPeriod: "(Sep 2022 personal project)",
-        projectImgSrc: ["portfolio", "babySleep", "portfolio", "babySleep"],
+        projectImgSrc: [
+          "portfolio1",
+          "portfolio2",
+          "portfolio3",
+          "portfolio4",
+          "portfolio5",
+        ],
         projectSubtitle: "This is my portfolio website which you are seeing",
         projectSummary:
           "It shows my information, Skills, Archivings, Projects and Career.",
