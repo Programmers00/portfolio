@@ -108,6 +108,7 @@ export default {
   .slideWrapper {
     width: v-bind(imgWrapperWidth);
     margin-left: v-bind(marginLeft);
+    transition: margin-left 0.4s;
     .img {
       width: v-bind(imgWidth);
       float: left;
